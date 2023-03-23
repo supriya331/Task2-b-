@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h2>Create New Account</h2>
+    <h3>Contact Us</h3>
+    <div class="container">
+        <form id="form1">
+            <h3>PERSONAL DETAILS</h3>
+            <div class="input-box">
+                <span class="details">First name:</span>
+                <input type="text" placeholder="Enter your First name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Last name</span>
+                <input type="text" placeholder="Enter your Last name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Phone no.</span>
+                <input type="text" placeholder="Enter your Phone no." required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your Email" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter your Password" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="text" placeholder="Confirm Password" required>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>    
+        </form>
+
+        <form id="form2">
+            <h3>Business Information</h3>
+            <div class="input-box">
+                <span class="details">Brand name:</span>
+                <input type="text" placeholder="Enter your Brand name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Brand type:</span>
+                <input type="text" placeholder="Enter your Brand type" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Street ADD.:</span>
+                <input type="text" placeholder="Enter your address" required>
+            </div>
+            <div class="input-box">
+                <span class="details">City:</span>
+                <input type="text" placeholder="Enter your city" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Zip Code:</span>
+                <input type="text" placeholder="Enter your Zip code" required>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="next2">Next</button>
+                <button type="button" id="back1">Back</button>
+            </div>    
+        </form>
+   
+        <form id="form3">
+            <h3>Additional Users</h3>
+            <input type="text" placeholder="email address">
+            <input type="password" placeholder="password">
+            <input type="password" placeholder="confirm password">
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="submit">Submit</button>
+            </div>    
+        </form>     
+        
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step-1</small></div>
+            <div class="step-col"><small>Step-2</small></div>
+            <div class="step-col"><small>Step-3</small></div>
+        </div>
+
+<script>
+     var form1 = document.getElementById("form1");
+     var form2 = document.getElementById("form2");
+     var form3 = document.getElementById("form3");
+
+     var next1 = document.getElementById("next1");
+     var next2 = document.getElementById("next2");
+
+     var back1 = document.getElementById("back1");
+     var back2 = document.getElementById("back2");
+
+     var progress = document.getElementById("progress");
+    
+     next1.onclick = function(){
+        form1.style.left = "-450px";
+        form2.style.left = "40px";
+        progress.style.width = "240px";
+    } 
+     
+    back1.onclick = function(){
+        form1.style.left = "40px";
+        form2.style.left = "450px";
+        progress.style.width = "120px";
+    }
+    next2.onclick = function(){
+        form2.style.left = "-450px";
+        form3.style.left = "40px";
+    }
+    back2.onclick = function(){
+        form2.style.left = "40px";
+        form3.style.left = "450px";
+    }
+
+</script>
+
+    </div>
+</body>
+</html>
